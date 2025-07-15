@@ -14,6 +14,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #f0f4ff !important;
+}
+
 /* Navbar */
 .navbar {
   backdrop-filter: blur(2px);
@@ -57,10 +61,7 @@ html {
 
 /* Header */
 header {
-  display: flex;
-  min-height: 88vh;
   padding-top: 80px;
-  align-items: center;
   background-color: #4961f2;
 }
 
@@ -84,10 +85,15 @@ header .col:last-child {
 .waves {
   width: 100%;
   height: 15vh;
-  max-height: 150px;
   min-height: 100px;
+  max-height: 150px;
   position: relative;
-  transform: rotate(180deg);
+  margin-bottom: -7px;
+}
+
+svg {
+  overflow: hidden;
+  vertical-align: middle;
 }
 
 .parallax > use {
@@ -116,10 +122,10 @@ header .col:last-child {
 
 @keyframes move-forever {
   0% {
-    transform: translate3d(90px, 0, 0);
+    transform: translate3d(-90px, 0, 0);
   }
   100% {
-    transform: translate3d(-85px, 0, 0);
+    transform: translate3d(85px, 0, 0);
   }
 }
 
@@ -162,6 +168,10 @@ header .col:last-child {
 
   .navbar-nav .nav-link:last-child {
     padding-right: 0 !important;
+  }
+
+  header {
+    padding-top: 208px;
   }
 }
 

@@ -28,7 +28,7 @@ const App = () => {
 
       {/* Header */}
       <header>
-        <div className="container py-5 py-lg-0">
+        <div className="container py-5 py-lg-0 mb-lg-5">
           <div className="row row-cols-1 row-cols-lg-2">
             <div className="col">
               <h1 className="title mb-3 text-sm-center text-lg-start">
@@ -77,52 +77,47 @@ const App = () => {
             </div>
           </div>
         </div>
-      </header>
 
-      {/* Waves Animation */}
-      <div>
-        <svg
-          className="waves"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-          viewBox="0 24 150 28"
-          preserveAspectRatio="none"
-          shapeRendering="auto"
-        >
-          <defs>
-            <path
-              id="gentle-wave"
-              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
-            />
-          </defs>
-          <g className="parallax">
-            <use
-              xlinkHref="#gentle-wave"
-              x="48"
-              y="0"
-              fill="rgba(73, 97, 242)"
-            />
-            <use
-              xlinkHref="#gentle-wave"
-              x="48"
-              y="3"
-              fill="rgba(73, 97, 242,0.5)"
-            />
-            <use
-              xlinkHref="#gentle-wave"
-              x="48"
-              y="5"
-              fill="rgba(73, 97, 242,0.3)"
-            />
-            <use
-              xlinkHref="#gentle-wave"
-              x="48"
-              y="7"
-              fill="rgba(73, 97, 242,0.1)"
-            />
-          </g>
-        </svg>
-      </div>
+        {/* Waves Animation */}
+        <div>
+          <svg
+            className="waves"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28"
+            preserveAspectRatio="none"
+            shapeRendering="auto"
+          >
+            <defs>
+              <path
+                id="gentle-wave"
+                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+              />
+            </defs>
+            <g className="parallax">
+              <use
+                xlinkHref="#gentle-wave"
+                x="48"
+                y="0"
+                fill="rgba(255,255,255,0.7)"
+              />
+              <use
+                xlinkHref="#gentle-wave"
+                x="48"
+                y="3"
+                fill="rgba(255,255,255,0.5)"
+              />
+              <use
+                xlinkHref="#gentle-wave"
+                x="48"
+                y="5"
+                fill="rgba(255,255,255,0.3)"
+              />
+              <use xlinkHref="#gentle-wave" x="48" y="7" fill="#F0F4FF" />
+            </g>
+          </svg>
+        </div>
+      </header>
 
       {/*  */}
       <p className="mt-5">
