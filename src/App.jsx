@@ -28,7 +28,7 @@ const App = () => {
 
       {/* Header */}
       <header>
-        <div className="container py-5 py-lg-0">
+        <div className="container py-4 py-lg-0">
           <div className="row row-cols-1 row-cols-lg-2">
             <div className="col">
               <h1 className="title mb-3 text-sm-center text-lg-start">
