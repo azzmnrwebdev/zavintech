@@ -142,10 +142,6 @@ header .col:last-child {
 
 /* Breakpoint */
 @media (max-width: 768px) {
-  header {
-    min-height: 100vh;
-  }
-
   .waves {
     height: 40px;
     min-height: 40px;
