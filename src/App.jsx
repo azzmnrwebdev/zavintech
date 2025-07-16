@@ -1,7 +1,7 @@
 import "./assets/css/index.css";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import Phone from "./assets/images/phone.png";
+import Phone from "./assets/images/phone.PNG";
 import Container from "react-bootstrap/Container";
 import Dashboard from "./assets/images/dashboard.jpg";
 
