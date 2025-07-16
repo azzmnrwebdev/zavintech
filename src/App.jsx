@@ -62,6 +62,8 @@ const App = () => {
                 src={Dashboard}
                 className="rounded-3 float-animation"
                 style={{ width: "90%" }}
+                width="90%"
+                height="auto"
                 alt="Dashboard Illustration"
               />
 
@@ -72,6 +74,8 @@ const App = () => {
                   width: "20%",
                   right: "0.75rem",
                 }}
+                width="20%"
+                height="auto"
                 alt="Phone Illustration"
               />
             </div>
