@@ -219,6 +219,38 @@ main {
   text-align: center;
 }
 
+#packages .filter span {
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+#packages .filter span.active {
+  font-weight: 600;
+  color: #4961f2;
+}
+
+#packages .filter span::after {
+  left: 0;
+  width: 0;
+  bottom: 0;
+  height: 2px;
+  content: "";
+  position: absolute;
+  background-color: #4961f2;
+  transition: width 0.3s ease;
+}
+
+#packages .filter span.active::after,
+#packages .filter span:hover::after {
+  width: 100%;
+}
+
+#packages .filter span:not(.active):hover {
+  color: #4961f2;
+}
+
 /* Animation */
 @keyframes float {
   0% {

@@ -1,17 +1,52 @@
 import "./assets/css/index.css";
 import Nav from "react-bootstrap/Nav";
+import { useRef, useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Phone from "./assets/images/phone.PNG";
 import Container from "react-bootstrap/Container";
 import Dashboard from "./assets/images/dashboard.jpg";
-import Mobile from "./assets/images/services/mobile.svg";
-import Website from "./assets/images/services/website.svg";
-import UiUxDesign from "./assets/images/services/uiux.svg";
-import Animation from "./assets/images/services/animation.svg";
-import VideoEditing from "./assets/images/services/video-editing.svg";
-import GraphicDesign from "./assets/images/services/graphic-design.svg";
+import MobileIllustration from "./assets/images/services/mobile.svg";
+import WebsiteIllustration from "./assets/images/services/website.svg";
+import UIUXDesignIllustration from "./assets/images/services/uiux.svg";
+import AnimationIllustration from "./assets/images/services/animation.svg";
+import VideoEditingIllustration from "./assets/images/services/video-editing.svg";
+import GraphicDesignIllustration from "./assets/images/services/graphic-design.svg";
 
 const App = () => {
+  const PackageFilterRefs = useRef({});
+  const [activePackageFilter, setActivePackageFilter] = useState(
+    "Mobile App Development"
+  );
+
+  // Filter Packages
+  const packageFilters = [
+    "Mobile App Development",
+    "Website Development",
+    "UI/UX Design",
+    "Video Editing",
+    "Graphic Design",
+    "2D Animation Production",
+  ];
+
+  const packageContents = {
+    "Mobile App Development": <PackageMobile />,
+    "Website Development": <PackageWebsite />,
+    "UI/UX Design": <PackageUIUXDesign />,
+    "Video Editing": <PackageVideoEditing />,
+    "Graphic Design": <PackageGraphicDesign />,
+    "2D Animation Production": <Package2DAnimation />,
+  };
+
+  const handleFilterClick = (filter) => {
+    setActivePackageFilter(filter);
+
+    PackageFilterRefs.current[filter]?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
+  };
+
   return (
     <>
       {/* Navbar */}
@@ -148,7 +183,7 @@ const App = () => {
                   <div className="card-body p-4">
                     <div className="box">
                       <img
-                        src={Mobile}
+                        src={MobileIllustration}
                         width="100%"
                         height="100%"
                         alt="Mobile App Development"
@@ -170,7 +205,7 @@ const App = () => {
                   <div className="card-body p-4">
                     <div className="box">
                       <img
-                        src={Website}
+                        src={WebsiteIllustration}
                         width="100%"
                         height="100%"
                         alt="Website Development"
@@ -192,7 +227,7 @@ const App = () => {
                   <div className="card-body p-4">
                     <div className="box">
                       <img
-                        src={UiUxDesign}
+                        src={UIUXDesignIllustration}
                         width="100%"
                         height="100%"
                         alt="UI/UX Design"
@@ -214,7 +249,7 @@ const App = () => {
                   <div className="card-body p-4">
                     <div className="box">
                       <img
-                        src={VideoEditing}
+                        src={VideoEditingIllustration}
                         width="100%"
                         height="100%"
                         alt="Video Editing"
@@ -236,7 +271,7 @@ const App = () => {
                   <div className="card-body p-4">
                     <div className="box">
                       <img
-                        src={GraphicDesign}
+                        src={GraphicDesignIllustration}
                         width="100%"
                         height="100%"
                         alt="Graphic Design"
@@ -258,7 +293,7 @@ const App = () => {
                   <div className="card-body p-4">
                     <div className="box">
                       <img
-                        src={Animation}
+                        src={AnimationIllustration}
                         width="100%"
                         height="100%"
                         alt="2D Animation"
@@ -289,77 +324,79 @@ const App = () => {
               </p>
             </div>
 
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's standard
-              dummy text ever since the 1500s, when an unknown printer took a
-              galley of type and scrambled it to make a type specimen book. It
-              has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's standard
-              dummy text ever since the 1500s, when an unknown printer took a
-              galley of type and scrambled it to make a type specimen book. It
-              has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's standard
-              dummy text ever since the 1500s, when an unknown printer took a
-              galley of type and scrambled it to make a type specimen book. It
-              has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's standard
-              dummy text ever since the 1500s, when an unknown printer took a
-              galley of type and scrambled it to make a type specimen book. It
-              has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's standard
-              dummy text ever since the 1500s, when an unknown printer took a
-              galley of type and scrambled it to make a type specimen book. It
-              has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's standard
-              dummy text ever since the 1500s, when an unknown printer took a
-              galley of type and scrambled it to make a type specimen book. It
-              has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
+            {/* Filter */}
+            <div
+              className="d-flex align-items-center gap-4 flex-nowrap overflow-x-auto filter"
+              style={{
+                borderBottom: "2px solid #e0e0e0",
+                scrollbarWidth: "none",
+              }}
+            >
+              {packageFilters.map((filter) => (
+                <span
+                  key={filter}
+                  ref={(el) => (PackageFilterRefs.current[filter] = el)}
+                  className={`fw-semibold text-nowrap ${
+                    activePackageFilter === filter ? "active" : ""
+                  }`}
+                  onClick={() => handleFilterClick(filter)}
+                >
+                  <small>{filter}</small>
+                </span>
+              ))}
+            </div>
+
+            {/* Content */}
+            <div className="package-content mt-4">
+              {packageContents[activePackageFilter]}
+            </div>
           </div>
         </section>
       </main>
     </>
   );
 };
+
+const PackageMobile = () => (
+  <>
+    <h3>Mobile App Packages</h3>
+    <p>Konten spesifik untuk Mobile App...</p>
+  </>
+);
+
+const PackageWebsite = () => (
+  <>
+    <h3>Website Packages</h3>
+    <p>Konten spesifik untuk Website...</p>
+  </>
+);
+
+const PackageUIUXDesign = () => (
+  <>
+    <h3>UI/UX Packages</h3>
+    <p>Konten spesifik untuk UI/UX...</p>
+  </>
+);
+
+const PackageVideoEditing = () => (
+  <>
+    <h3>Video Editing Packages</h3>
+    <p>Konten spesifik untuk Video Editing...</p>
+  </>
+);
+
+const PackageGraphicDesign = () => (
+  <>
+    <h3>Graphic Design Packages</h3>
+    <p>Konten spesifik untuk Graphic Design...</p>
+  </>
+);
+
+const Package2DAnimation = () => (
+  <>
+    <h3>2D Animation Packages</h3>
+    <p>Konten spesifik untuk 2D Animation...</p>
+  </>
+);
 
 export default App;
