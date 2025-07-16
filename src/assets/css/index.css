@@ -171,12 +171,20 @@ svg {
   }
 
   header {
-    padding-top: 208px;
+    padding-top: 180px;
+  }
+
+  header .container {
+    margin-bottom: 6.25rem;
   }
 }
 
 @media (min-width: 1200px) {
   .container {
     max-width: 1170px !important;
+  }
+
+  header .title {
+    font-size: 3rem;
   }
 }

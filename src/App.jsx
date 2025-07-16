@@ -1,7 +1,7 @@
 import "./assets/css/index.css";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import Phone from "./assets/images/phone.jpg";
+import Phone from "./assets/images/phone.png";
 import Container from "react-bootstrap/Container";
 import Dashboard from "./assets/images/dashboard.jpg";
 
@@ -28,7 +28,7 @@ const App = () => {
 
       {/* Header */}
       <header>
-        <div className="container py-5 py-lg-0 mb-lg-5">
+        <div className="container py-5 py-lg-0">
           <div className="row row-cols-1 row-cols-lg-2">
             <div className="col">
               <h1 className="title mb-3 text-sm-center text-lg-start">
