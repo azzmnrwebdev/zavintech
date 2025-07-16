@@ -129,6 +129,96 @@ svg {
   }
 }
 
+/* Main */
+main {
+  padding: 1rem 0;
+}
+
+/* Services Section */
+#services {
+  padding: 7rem 0 2rem 0;
+}
+
+#services .title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4961f2;
+  text-align: center;
+}
+
+#services .description {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0;
+  color: #333333;
+  text-align: center;
+}
+
+#services .card {
+  cursor: pointer;
+  border-radius: 12px;
+  border-color: #e4e4e4;
+  transition: all 0.4s ease;
+}
+
+#services .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px -5px;
+}
+
+#services .card-body {
+  padding: 1.25rem;
+}
+
+#services .box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  padding: 0.75rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f4ff;
+}
+
+#services .card-title {
+  font-weight: 500;
+  color: #333333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  transition: color 0.4s ease;
+}
+
+#services .card:hover .card-title {
+  color: #4961f2;
+}
+
+#services .card-text {
+  font-size: 1rem;
+  margin-bottom: 0;
+  color: #333333;
+}
+
+/* Packages Section */
+#packages {
+  padding: 7rem 0 2rem 0;
+}
+
+#packages .title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4961f2;
+  text-align: center;
+}
+
+#packages .description {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0;
+  color: #333333;
+  text-align: center;
+}
+
 /* Animation */
 @keyframes float {
   0% {
@@ -158,6 +248,22 @@ svg {
   header .title {
     font-size: 2.5rem;
   }
+
+  #services .title {
+    font-size: 2.5rem;
+  }
+
+  #services .description {
+    font-size: 1.125rem;
+  }
+
+  #packages .title {
+    font-size: 2.5rem;
+  }
+
+  #packages .description {
+    font-size: 1.125rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -177,6 +283,16 @@ svg {
   header .container {
     margin-bottom: 6.25rem;
   }
+
+  #services .description {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  #packages .description {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -186,5 +302,20 @@ svg {
 
   header .title {
     font-size: 3rem;
+  }
+
+  #services .row {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  #services .description {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  #packages .description {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
