@@ -347,7 +347,7 @@ const App = () => {
             </div>
 
             {/* Content */}
-            <div className="package-content mt-4">
+            <div className="package-content">
               {packageContents[activePackageFilter]}
             </div>
           </div>
@@ -359,8 +359,100 @@ const App = () => {
 
 const PackageMobile = () => (
   <>
-    <h3>Mobile App Packages</h3>
-    <p>Konten spesifik untuk Mobile App...</p>
+    <div
+      id="packageMobile"
+      className="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center g-3"
+    >
+      {/* Basic Plans */}
+      <div className="col">
+        <div className="card bg-white h-100 rounded-5">
+          <div className="card-body p-4">
+            <h5 className="card-title mb-1">Basic Plans</h5>
+            <span className="card-subtitle">
+              <small>Ideal for small businesses</small>
+            </span>
+
+            <div className="mb-4" style={{ marginTop: "4rem" }}>
+              <h1 className="card-price mb-4 text-center">Rp 15 JT</h1>
+              <hr
+                className="my-0"
+                style={{ height: "2px", backgroundColor: "#4961f2" }}
+              />
+            </div>
+
+            <p className="card-text text-center">
+              Perfect for simple projects with standard features, simple
+              animation and a faster turnaround time. Great for small businesses
+              or startups who need a clean, functional result.
+            </p>
+
+            <a href="#" className="btn text-white fs-6 fw-semibold w-100">
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Business Plans */}
+      <div className="col">
+        <div className="card bg-white h-100 rounded-5">
+          <div className="card-body p-4">
+            <h5 className="card-title mb-1">Business Plans</h5>
+            <span className="card-subtitle">
+              <small>Ideal for small businesses</small>
+            </span>
+
+            <div className="mb-4" style={{ marginTop: "4rem" }}>
+              <h1 className="card-price mb-4 text-center">Rp 15 JT</h1>
+              <hr
+                className="my-0"
+                style={{ height: "2px", backgroundColor: "#4961f2" }}
+              />
+            </div>
+
+            <p className="card-text text-center">
+              Perfect for simple projects with standard features, simple
+              animation and a faster turnaround time. Great for small businesses
+              or startups who need a clean, functional result.
+            </p>
+
+            <a href="#" className="btn text-white fs-6 fw-semibold w-100">
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Enterprise Plans */}
+      <div className="col">
+        <div className="card bg-white h-100 rounded-5">
+          <div className="card-body p-4">
+            <h5 className="card-title mb-1">Enterprise Plans</h5>
+            <span className="card-subtitle">
+              <small>Ideal for small businesses</small>
+            </span>
+
+            <div className="mb-4" style={{ marginTop: "4rem" }}>
+              <h1 className="card-price mb-4 text-center">Rp 15 JT</h1>
+              <hr
+                className="my-0"
+                style={{ height: "2px", backgroundColor: "#4961f2" }}
+              />
+            </div>
+
+            <p className="card-text text-center">
+              Perfect for simple projects with standard features, simple
+              animation and a faster turnaround time. Great for small businesses
+              or startups who need a clean, functional result.
+            </p>
+
+            <a href="#" className="btn text-white fs-6 fw-semibold w-100">
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </>
 );
 
