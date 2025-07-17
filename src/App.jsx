@@ -376,7 +376,7 @@ const PackageMobile = () => (
               <h1 className="card-price mb-4 text-center">Rp 15 JT</h1>
               <hr
                 className="my-0"
-                style={{ height: "2px", backgroundColor: "#4961f2" }}
+                style={{ height: "2px", backgroundColor: "#4287f5" }}
               />
             </div>
 
@@ -442,7 +442,7 @@ const PackageMobile = () => (
               <h1 className="card-price mb-4 text-center">Rp 15 JT</h1>
               <hr
                 className="my-0"
-                style={{ height: "2px", backgroundColor: "#4961f2" }}
+                style={{ height: "2px", backgroundColor: "#4287f5" }}
               />
             </div>
 
