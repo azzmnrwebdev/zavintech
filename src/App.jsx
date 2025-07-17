@@ -361,7 +361,7 @@ const PackageMobile = () => (
   <>
     <div
       id="packageMobile"
-      className="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center g-3"
+      className="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-xl-center g-3"
     >
       {/* Basic Plans */}
       <div className="col">
@@ -386,7 +386,10 @@ const PackageMobile = () => (
               or startups who need a clean, functional result.
             </p>
 
-            <a href="#" className="btn text-white fs-6 fw-semibold w-100">
+            <a
+              href="#"
+              className="btn text-white fs-6 fw-semibold w-100 rounded-pill"
+            >
               Get Started
             </a>
           </div>
@@ -406,7 +409,7 @@ const PackageMobile = () => (
               <h1 className="card-price mb-4 text-center">Rp 15 JT</h1>
               <hr
                 className="my-0"
-                style={{ height: "2px", backgroundColor: "#4961f2" }}
+                style={{ height: "2px", backgroundColor: "white" }}
               />
             </div>
 
@@ -416,7 +419,10 @@ const PackageMobile = () => (
               or startups who need a clean, functional result.
             </p>
 
-            <a href="#" className="btn text-white fs-6 fw-semibold w-100">
+            <a
+              href="#"
+              className="btn text-white fs-6 fw-semibold w-100 rounded-pill"
+            >
               Get Started
             </a>
           </div>
@@ -446,7 +452,10 @@ const PackageMobile = () => (
               or startups who need a clean, functional result.
             </p>
 
-            <a href="#" className="btn text-white fs-6 fw-semibold w-100">
+            <a
+              href="#"
+              className="btn text-white fs-6 fw-semibold w-100 rounded-pill"
+            >
               Get Started
             </a>
           </div>

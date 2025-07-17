@@ -263,6 +263,10 @@ main {
   transition: all 0.4s ease;
 }
 
+#packages .package-content #packageMobile .col:nth-child(2) .card {
+  background-color: #4961f2 !important;
+}
+
 #packages .package-content #packageMobile .card:hover {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px -5px;
 }
@@ -273,9 +277,22 @@ main {
   font-size: 1.5rem;
 }
 
+#packages .package-content #packageMobile .col:nth-child(2) .card .card-title {
+  color: white !important;
+}
+
 #packages .package-content #packageMobile .card .card-subtitle {
   color: #4961f2;
   font-weight: 500;
+}
+
+#packages
+  .package-content
+  #packageMobile
+  .col:nth-child(2)
+  .card
+  .card-subtitle {
+  color: white !important;
 }
 
 #packages .package-content #packageMobile .card .card-price {
@@ -285,18 +302,32 @@ main {
   font-family: "Poppins", sans-serif;
 }
 
+#packages .package-content #packageMobile .col:nth-child(2) .card .card-price {
+  color: white !important;
+}
+
 #packages .package-content #packageMobile .card .card-text {
   font-size: 1rem;
   color: #4961f2;
   font-weight: 500;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
+}
+
+#packages .package-content #packageMobile .col:nth-child(2) .card .card-text {
+  color: white !important;
 }
 
 #packages .package-content #packageMobile .card a.btn {
   border-radius: 8px;
   padding: 0.75rem 1.5rem;
-  background-color: #4961f2;
   transition: background-color 0.3s ease;
+  background: linear-gradient(to right, #4961f2, #5d99f5, #00B4FF);
+}
+
+#packages .package-content #packageMobile .col:nth-child(2) .card a.btn {
+  background: none;
+  color: #4961f2 !important;
+  background-color: white !important;
 }
 
 /* Animation */
