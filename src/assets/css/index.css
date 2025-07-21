@@ -16,13 +16,12 @@ html {
 }
 
 body {
-  background-color: #f0f4ff !important;
+  background-color: #f0f6ff !important;
 }
 
 /* Navbar */
 .navbar {
   backdrop-filter: blur(2px);
-  /* background-color: rgba(73, 97, 242, 0.9); */
   background-color: rgba(66, 135, 245, 0.9);
 }
 
@@ -158,7 +157,6 @@ main {
 }
 
 #services .card {
-  cursor: pointer;
   border-radius: 12px;
   border-color: #e4e4e4;
   transition: all 0.4s ease;
@@ -264,10 +262,6 @@ main {
   transition: all 0.4s ease;
 }
 
-#packages .package-content #packageMobile .col:nth-child(2) .card {
-  background-color: #4287f5 !important;
-}
-
 #packages .package-content #packageMobile .card:hover {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px -5px;
 }
@@ -278,22 +272,9 @@ main {
   font-size: 1.5rem;
 }
 
-#packages .package-content #packageMobile .col:nth-child(2) .card .card-title {
-  color: white !important;
-}
-
 #packages .package-content #packageMobile .card .card-subtitle {
   color: #4287f5;
   font-weight: 500;
-}
-
-#packages
-  .package-content
-  #packageMobile
-  .col:nth-child(2)
-  .card
-  .card-subtitle {
-  color: white !important;
 }
 
 #packages .package-content #packageMobile .card .card-price {
@@ -303,32 +284,18 @@ main {
   font-family: "Poppins", sans-serif;
 }
 
-#packages .package-content #packageMobile .col:nth-child(2) .card .card-price {
-  color: white !important;
-}
-
-#packages .package-content #packageMobile .card .card-text {
+/* #packages .package-content #packageMobile .card .card-text {
   font-size: 1rem;
   color: #4287f5;
   font-weight: 500;
   margin-bottom: 2.5rem;
-}
-
-#packages .package-content #packageMobile .col:nth-child(2) .card .card-text {
-  color: white !important;
-}
+} */
 
 #packages .package-content #packageMobile .card a.btn {
+  border: none;
   border-radius: 8px;
   padding: 0.75rem 1.5rem;
-  transition: background-color 0.3s ease;
-  background: linear-gradient(to right, #4287f5, #5d99f5, #00b4ff);
-}
-
-#packages .package-content #packageMobile .col:nth-child(2) .card a.btn {
-  background: none;
-  color: #4287f5 !important;
-  background-color: white !important;
+  background: linear-gradient(to right, #4287f5 0%, #5d99f5 50%, #00b4ff 100%);
 }
 
 /* Animation */
@@ -437,13 +404,5 @@ main {
 
   #packages .package-content #packageMobile .card .card-price {
     font-size: 3rem;
-  }
-
-  #packages .package-content #packageMobile .col {
-    width: auto;
-  }
-
-  #packages .package-content #packageMobile .card {
-    width: 360px;
   }
 }

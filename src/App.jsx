@@ -73,12 +73,17 @@ const App = () => {
           <div className="row row-cols-1 row-cols-lg-2">
             <div className="col">
               <h1 className="title mb-3 text-sm-center text-lg-start">
-                Explore How Websites & Animation Elevate Your Brand.
+                {/* Explore How Websites & Animation Elevate Your Brand */}
+                Professional Digital Services for Business Growth
               </h1>
               <p className="description mb-4 text-sm-center text-lg-start">
-                Zavintech helps your businesses grow by providing professional
+                {/* Zavintech helps your businesses grow by providing professional
                 websites, smart e-commerce solutions, and creative animations to
-                strengthen your online presence.
+                strengthen your online presence. */}
+                Zavintech provides a complete digital solution, ranging from app
+                development, websites, to visual design, to help your business
+                build a professional image and effectively reach its target
+                market.
               </p>
 
               <div className="d-flex align-items-center justify-content-sm-center justify-content-lg-start gap-3">
@@ -235,9 +240,9 @@ const App = () => {
                     </div>
                     <h5 className="card-title">UI/UX Design</h5>
                     <p className="card-text">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text.
+                      We design thoughtful, user-friendly interfaces that
+                      enhance experience, simplify navigation, and support
+                      business goals.
                     </p>
                   </div>
                 </div>
@@ -257,9 +262,9 @@ const App = () => {
                     </div>
                     <h5 className="card-title">Video Editing</h5>
                     <p className="card-text">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text.
+                      We edit and refine videos with clear storytelling, smooth
+                      transitions, and visuals that keep your audience engaged
+                      to the end.
                     </p>
                   </div>
                 </div>
@@ -279,9 +284,9 @@ const App = () => {
                     </div>
                     <h5 className="card-title">Graphic Design</h5>
                     <p className="card-text">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text.
+                      We create professional graphic assets that align with your
+                      brand, convey your message, and leave a lasting visual
+                      impression.
                     </p>
                   </div>
                 </div>
@@ -301,9 +306,9 @@ const App = () => {
                     </div>
                     <h5 className="card-title">2D Animation Production</h5>
                     <p className="card-text">
-                      We don't just build your website or app — we also help you
-                      create visuals and animations to make your brand stand
-                      out.
+                      We produce engaging 2D animations that simplify complex
+                      ideas, promote your services, and bring your brand to life
+                      with motion.
                     </p>
                   </div>
                 </div>
@@ -326,7 +331,7 @@ const App = () => {
 
             {/* Filter */}
             <div
-              className="d-flex align-items-center gap-4 flex-nowrap overflow-x-auto filter"
+              className="d-flex justify-content-center align-items-center gap-4 flex-nowrap overflow-x-auto filter"
               style={{
                 borderBottom: "2px solid #e0e0e0",
                 scrollbarWidth: "none",
@@ -361,13 +366,13 @@ const PackageMobile = () => (
   <>
     <div
       id="packageMobile"
-      className="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-xl-center g-3"
+      className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
     >
       {/* Basic Plans */}
       <div className="col">
         <div className="card bg-white h-100 rounded-5">
           <div className="card-body p-4">
-            <h5 className="card-title mb-1">Basic Plans</h5>
+            <h5 className="card-title mb-1">Basic Plan</h5>
             <span className="card-subtitle">
               <small>Ideal for small businesses</small>
             </span>
@@ -380,11 +385,102 @@ const PackageMobile = () => (
               />
             </div>
 
-            <p className="card-text text-center">
-              Perfect for simple projects with standard features, simple
-              animation and a faster turnaround time. Great for small businesses
-              or startups who need a clean, functional result.
-            </p>
+            <div
+              style={{ marginBottom: "2.5rem" }}
+              className="d-flex flex-column text-dark fs-6 gap-3"
+            >
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+            </div>
 
             <a
               href="#"
@@ -400,24 +496,115 @@ const PackageMobile = () => (
       <div className="col">
         <div className="card bg-white h-100 rounded-5">
           <div className="card-body p-4">
-            <h5 className="card-title mb-1">Business Plans</h5>
+            <h5 className="card-title mb-1">Business Plan</h5>
             <span className="card-subtitle">
-              <small>Ideal for small businesses</small>
+              <small>Perfect for growing businesses</small>
             </span>
 
             <div className="mb-4" style={{ marginTop: "4rem" }}>
               <h1 className="card-price mb-4 text-center">Rp 15 JT</h1>
               <hr
                 className="my-0"
-                style={{ height: "2px", backgroundColor: "white" }}
+                style={{ height: "2px", backgroundColor: "#4287f5" }}
               />
             </div>
 
-            <p className="card-text text-center">
-              Perfect for simple projects with standard features, simple
-              animation and a faster turnaround time. Great for small businesses
-              or startups who need a clean, functional result.
-            </p>
+            <div
+              style={{ marginBottom: "2.5rem" }}
+              className="d-flex flex-column text-dark fs-6 gap-3"
+            >
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+            </div>
 
             <a
               href="#"
@@ -433,9 +620,9 @@ const PackageMobile = () => (
       <div className="col">
         <div className="card bg-white h-100 rounded-5">
           <div className="card-body p-4">
-            <h5 className="card-title mb-1">Enterprise Plans</h5>
+            <h5 className="card-title mb-1">Enterprise Plan</h5>
             <span className="card-subtitle">
-              <small>Ideal for small businesses</small>
+              <small>Ideal for large corporations</small>
             </span>
 
             <div className="mb-4" style={{ marginTop: "4rem" }}>
@@ -446,11 +633,102 @@ const PackageMobile = () => (
               />
             </div>
 
-            <p className="card-text text-center">
-              Perfect for simple projects with standard features, simple
-              animation and a faster turnaround time. Great for small businesses
-              or startups who need a clean, functional result.
-            </p>
+            <div
+              style={{ marginBottom: "2.5rem" }}
+              className="d-flex flex-column text-dark fs-6 gap-3"
+            >
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+              <div className="d-flex align-items-center flex-wrap gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="#4287f5"
+                  className="bi bi-check-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+                <span>Simple and clean design</span>
+              </div>
+            </div>
 
             <a
               href="#"
