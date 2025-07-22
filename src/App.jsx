@@ -331,10 +331,10 @@ const App = () => {
 
             {/* Filter */}
             <div
-              className="d-flex justify-content-center align-items-center gap-4 flex-nowrap overflow-x-auto filter"
+              className="d-flex align-items-center gap-4 flex-nowrap overflow-x-auto filter"
               style={{
-                borderBottom: "2px solid #e0e0e0",
                 scrollbarWidth: "none",
+                borderBottom: "2px solid #e0e0e0",
               }}
             >
               {packageFilters.map((filter) => (
@@ -355,9 +355,167 @@ const App = () => {
             <div className="package-content">
               {packageContents[activePackageFilter]}
             </div>
+
+            <p
+              style={{ marginTop: "2rem" }}
+              className="mb-0 text-center fw-semibold"
+            >
+              Not sure which one to pick?{" "}
+              <a
+                href="https://wa.me/6285175067273?text=Halo%2C%20saya%20mau%20konsultasi."
+                style={{ color: "#4287f5" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get a consultation first
+              </a>
+              .
+            </p>
           </div>
         </section>
+
+        {/* Projects */}
+
+        {/* About Me */}
+        <section id="about">
+          <div className="container">
+            <div className="row row-cols-1 row-cols-lg-2">
+              <div className="col order-lg-1">
+                <h1 className="title mb-3">Why Choose Us</h1>
+                <p className="description mb-0">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </p>
+
+                <div className="row row-cols-1 row-cols-sm-2 g-3 mt-3">
+                  <div className="col">
+                    <div className="card border-0 bg-transparent rounded-0 h-100">
+                      <div className="card-body p-0">
+                        <div className="d-flex align-items-start">
+                          <div className="icon-wrapper">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 576 512"
+                            >
+                              <path
+                                fill="#f0f6ff"
+                                d="M163.9 136.9c-29.4-29.8-29.4-78.2 0-108s77-29.8 106.4 0l17.7 18 17.7-18c29.4-29.8 77-29.8 106.4 0s29.4 78.2 0 108L310.5 240.1c-6.2 6.3-14.3 9.4-22.5 9.4s-16.3-3.1-22.5-9.4L163.9 136.9zM568.2 336.3c13.1 17.8 9.3 42.8-8.5 55.9L433.1 485.5c-23.4 17.2-51.6 26.5-80.7 26.5L192 512 32 512c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l36.8 0 44.9-36c22.7-18.2 50.9-28 80-28l78.3 0 16 0 64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0-16 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l120.6 0 119.7-88.2c17.8-13.1 42.8-9.3 55.9 8.5zM193.6 384c0 0 0 0 0 0l-.9 0c.3 0 .6 0 .9 0z"
+                              />
+                            </svg>
+                          </div>
+                          <div className="ms-3">
+                            <h5 className="card-title fw-semibold">
+                              Kelebihan 1
+                            </h5>
+                            <p className="card-text fs-6">
+                              Lorem Ipsum is simply dummy text of the printing.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col">
+                    <div className="card border-0 bg-transparent rounded-0 h-100">
+                      <div className="card-body p-0">
+                        <div className="d-flex align-items-start">
+                          <div className="icon-wrapper">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 576 512"
+                            >
+                              <path
+                                fill="#f0f6ff"
+                                d="M163.9 136.9c-29.4-29.8-29.4-78.2 0-108s77-29.8 106.4 0l17.7 18 17.7-18c29.4-29.8 77-29.8 106.4 0s29.4 78.2 0 108L310.5 240.1c-6.2 6.3-14.3 9.4-22.5 9.4s-16.3-3.1-22.5-9.4L163.9 136.9zM568.2 336.3c13.1 17.8 9.3 42.8-8.5 55.9L433.1 485.5c-23.4 17.2-51.6 26.5-80.7 26.5L192 512 32 512c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l36.8 0 44.9-36c22.7-18.2 50.9-28 80-28l78.3 0 16 0 64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0-16 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l120.6 0 119.7-88.2c17.8-13.1 42.8-9.3 55.9 8.5zM193.6 384c0 0 0 0 0 0l-.9 0c.3 0 .6 0 .9 0z"
+                              />
+                            </svg>
+                          </div>
+                          <div className="ms-3">
+                            <h5 className="card-title fw-semibold">
+                              Kelebihan 2
+                            </h5>
+                            <p className="card-text fs-6">
+                              Lorem Ipsum is simply dummy text of the printing.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col">
+                    <div className="card border-0 bg-transparent rounded-0 h-100">
+                      <div className="card-body p-0">
+                        <div className="d-flex align-items-start">
+                          <div className="icon-wrapper">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 576 512"
+                            >
+                              <path
+                                fill="#f0f6ff"
+                                d="M163.9 136.9c-29.4-29.8-29.4-78.2 0-108s77-29.8 106.4 0l17.7 18 17.7-18c29.4-29.8 77-29.8 106.4 0s29.4 78.2 0 108L310.5 240.1c-6.2 6.3-14.3 9.4-22.5 9.4s-16.3-3.1-22.5-9.4L163.9 136.9zM568.2 336.3c13.1 17.8 9.3 42.8-8.5 55.9L433.1 485.5c-23.4 17.2-51.6 26.5-80.7 26.5L192 512 32 512c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l36.8 0 44.9-36c22.7-18.2 50.9-28 80-28l78.3 0 16 0 64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0-16 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l120.6 0 119.7-88.2c17.8-13.1 42.8-9.3 55.9 8.5zM193.6 384c0 0 0 0 0 0l-.9 0c.3 0 .6 0 .9 0z"
+                              />
+                            </svg>
+                          </div>
+                          <div className="ms-3">
+                            <h5 className="card-title fw-semibold">
+                              Kelebihan 3
+                            </h5>
+                            <p className="card-text fs-6">
+                              Lorem Ipsum is simply dummy text of the printing.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col">
+                    <div className="card border-0 bg-transparent rounded-0 h-100">
+                      <div className="card-body p-0">
+                        <div className="d-flex align-items-start">
+                          <div className="icon-wrapper">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 576 512"
+                            >
+                              <path
+                                fill="#f0f6ff"
+                                d="M163.9 136.9c-29.4-29.8-29.4-78.2 0-108s77-29.8 106.4 0l17.7 18 17.7-18c29.4-29.8 77-29.8 106.4 0s29.4 78.2 0 108L310.5 240.1c-6.2 6.3-14.3 9.4-22.5 9.4s-16.3-3.1-22.5-9.4L163.9 136.9zM568.2 336.3c13.1 17.8 9.3 42.8-8.5 55.9L433.1 485.5c-23.4 17.2-51.6 26.5-80.7 26.5L192 512 32 512c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l36.8 0 44.9-36c22.7-18.2 50.9-28 80-28l78.3 0 16 0 64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0-16 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l120.6 0 119.7-88.2c17.8-13.1 42.8-9.3 55.9 8.5zM193.6 384c0 0 0 0 0 0l-.9 0c.3 0 .6 0 .9 0z"
+                              />
+                            </svg>
+                          </div>
+                          <div className="ms-3">
+                            <h5 className="card-title fw-semibold">
+                              Kelebihan 4
+                            </h5>
+                            <p className="card-text fs-6">
+                              Lorem Ipsum is simply dummy text of the printing.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col">
+                <h1>Gambar</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Working Process */}
+
+        {/* FAQ */}
+
+        {/* Contact Us */}
       </main>
+
+      {/* Footer */}
     </>
   );
 };
@@ -389,7 +547,7 @@ const PackageMobile = () => (
               style={{ marginBottom: "2.5rem" }}
               className="d-flex flex-column text-dark fs-6 gap-3"
             >
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -402,7 +560,7 @@ const PackageMobile = () => (
                 </svg>
                 <span>Simple and clean design</span>
               </div>
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -415,7 +573,7 @@ const PackageMobile = () => (
                 </svg>
                 <span>Simple and clean design</span>
               </div>
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -428,7 +586,7 @@ const PackageMobile = () => (
                 </svg>
                 <span>Simple and clean design</span>
               </div>
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -441,7 +599,7 @@ const PackageMobile = () => (
                 </svg>
                 <span>Simple and clean design</span>
               </div>
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -454,7 +612,7 @@ const PackageMobile = () => (
                 </svg>
                 <span>Simple and clean design</span>
               </div>
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -467,7 +625,7 @@ const PackageMobile = () => (
                 </svg>
                 <span>Simple and clean design</span>
               </div>
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -513,7 +671,7 @@ const PackageMobile = () => (
               style={{ marginBottom: "2.5rem" }}
               className="d-flex flex-column text-dark fs-6 gap-3"
             >
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -526,7 +684,7 @@ const PackageMobile = () => (
                 </svg>
                 <span>Simple and clean design</span>
               </div>
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -539,7 +697,7 @@ const PackageMobile = () => (
                 </svg>
                 <span>Simple and clean design</span>
               </div>
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -552,7 +710,7 @@ const PackageMobile = () => (
                 </svg>
                 <span>Simple and clean design</span>
               </div>
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -565,7 +723,7 @@ const PackageMobile = () => (
                 </svg>
                 <span>Simple and clean design</span>
               </div>
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -578,7 +736,7 @@ const PackageMobile = () => (
                 </svg>
                 <span>Simple and clean design</span>
               </div>
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -591,7 +749,7 @@ const PackageMobile = () => (
                 </svg>
                 <span>Simple and clean design</span>
               </div>
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -637,7 +795,7 @@ const PackageMobile = () => (
               style={{ marginBottom: "2.5rem" }}
               className="d-flex flex-column text-dark fs-6 gap-3"
             >
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -650,7 +808,7 @@ const PackageMobile = () => (
                 </svg>
                 <span>Simple and clean design</span>
               </div>
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -663,7 +821,7 @@ const PackageMobile = () => (
                 </svg>
                 <span>Simple and clean design</span>
               </div>
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -676,7 +834,7 @@ const PackageMobile = () => (
                 </svg>
                 <span>Simple and clean design</span>
               </div>
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -689,7 +847,7 @@ const PackageMobile = () => (
                 </svg>
                 <span>Simple and clean design</span>
               </div>
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -702,7 +860,7 @@ const PackageMobile = () => (
                 </svg>
                 <span>Simple and clean design</span>
               </div>
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -715,7 +873,7 @@ const PackageMobile = () => (
                 </svg>
                 <span>Simple and clean design</span>
               </div>
-              <div className="d-flex align-items-center flex-wrap gap-3">
+              <div className="d-flex align-items-center flex-nowrap gap-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"

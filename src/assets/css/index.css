@@ -284,18 +284,42 @@ main {
   font-family: "Poppins", sans-serif;
 }
 
-/* #packages .package-content #packageMobile .card .card-text {
-  font-size: 1rem;
-  color: #4287f5;
-  font-weight: 500;
-  margin-bottom: 2.5rem;
-} */
-
 #packages .package-content #packageMobile .card a.btn {
   border: none;
   border-radius: 8px;
   padding: 0.75rem 1.5rem;
-  background: linear-gradient(to right, #4287f5 0%, #5d99f5 50%, #00b4ff 100%);
+  background: linear-gradient(to right, #4287f5, #5d99f5, #00b4ff);
+}
+
+/* Section About */
+#about {
+  padding: 7rem 0 2rem 0;
+}
+
+#about .title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4287f5;
+}
+
+#about .description {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0;
+  color: #333333;
+  text-align: justify;
+}
+
+#about .card .icon-wrapper {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-shrink: 0;
+  padding: 0.625rem;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  background-color: #3557ed;
 }
 
 /* Animation */
@@ -323,6 +347,10 @@ main {
   }
 }
 
+@media (min-width: 576px) {
+  /*  */
+}
+
 @media (min-width: 768px) {
   header .title {
     font-size: 2.5rem;
@@ -346,6 +374,14 @@ main {
 
   #packages .package-content #packageMobile .card .card-price {
     font-size: 2.5rem;
+  }
+
+  #about .title {
+    font-size: 2.5rem;
+  }
+
+  #about .description {
+    font-size: 1.125rem;
   }
 }
 
