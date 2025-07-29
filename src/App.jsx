@@ -60,7 +60,7 @@ const App = () => {
               <Nav.Link href="#">Project</Nav.Link>
               <Nav.Link href="#packages">Plans and Rate</Nav.Link>
               <Nav.Link href="#">FAQ</Nav.Link>
-              <Nav.Link href="#">About Us</Nav.Link>
+              <Nav.Link href="#about">About Us</Nav.Link>
               <Nav.Link href="#">Contact</Nav.Link>
             </Nav>
           </Navbar.Collapse>
@@ -407,7 +407,7 @@ const App = () => {
                             </svg>
                           </div>
                           <div className="ms-3">
-                            <h5 className="card-title fw-semibold">
+                            <h5 className="card-title fw-semibold mb-1">
                               Kelebihan 1
                             </h5>
                             <p className="card-text fs-6">
@@ -434,7 +434,7 @@ const App = () => {
                             </svg>
                           </div>
                           <div className="ms-3">
-                            <h5 className="card-title fw-semibold">
+                            <h5 className="card-title fw-semibold mb-1">
                               Kelebihan 2
                             </h5>
                             <p className="card-text fs-6">
@@ -461,7 +461,7 @@ const App = () => {
                             </svg>
                           </div>
                           <div className="ms-3">
-                            <h5 className="card-title fw-semibold">
+                            <h5 className="card-title fw-semibold mb-1">
                               Kelebihan 3
                             </h5>
                             <p className="card-text fs-6">
@@ -488,7 +488,7 @@ const App = () => {
                             </svg>
                           </div>
                           <div className="ms-3">
-                            <h5 className="card-title fw-semibold">
+                            <h5 className="card-title fw-semibold mb-1">
                               Kelebihan 4
                             </h5>
                             <p className="card-text fs-6">
