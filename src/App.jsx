@@ -3,6 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import { useRef, useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Phone from "./assets/images/phone.PNG";
+import People from "./assets/images/people.PNG";
 import Container from "react-bootstrap/Container";
 import Dashboard from "./assets/images/dashboard.jpg";
 import MobileIllustration from "./assets/images/services/mobile.svg";
@@ -14,9 +15,15 @@ import GraphicDesignIllustration from "./assets/images/services/graphic-design.s
 
 const App = () => {
   const PackageFilterRefs = useRef({});
+  const [expanded, setExpanded] = useState(false);
   const [activePackageFilter, setActivePackageFilter] = useState(
     "Mobile App Development"
   );
+
+  // Navbar
+  const closeNavbar = () => {
+    setExpanded(false);
+  };
 
   // Filter Packages
   const packageFilters = [
@@ -50,18 +57,35 @@ const App = () => {
   return (
     <>
       {/* Navbar */}
-      <Navbar expand="lg" className="fixed-top py-3">
+      <Navbar
+        expand="lg"
+        expanded={expanded}
+        className="fixed-top py-3"
+        onToggle={() => setExpanded((expanded) => !expanded)}
+      >
         <Container>
           <Navbar.Brand href="/">zavintech</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto mt-3 mt-lg-0">
-              <Nav.Link href="#services">Our Services</Nav.Link>
-              <Nav.Link href="#">Project</Nav.Link>
-              <Nav.Link href="#packages">Plans and Rate</Nav.Link>
-              <Nav.Link href="#">FAQ</Nav.Link>
-              <Nav.Link href="#">About Us</Nav.Link>
-              <Nav.Link href="#">Contact</Nav.Link>
+              <Nav.Link href="#services" onClick={closeNavbar}>
+                Our Services
+              </Nav.Link>
+              <Nav.Link href="#" onClick={closeNavbar}>
+                Project
+              </Nav.Link>
+              <Nav.Link href="#packages" onClick={closeNavbar}>
+                Plans and Rate
+              </Nav.Link>
+              <Nav.Link href="#" onClick={closeNavbar}>
+                FAQ
+              </Nav.Link>
+              <Nav.Link href="#about" onClick={closeNavbar}>
+                About Us
+              </Nav.Link>
+              <Nav.Link href="#" onClick={closeNavbar}>
+                Contact
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -358,7 +382,7 @@ const App = () => {
 
             <p
               style={{ marginTop: "2rem" }}
-              className="mb-0 text-center fw-semibold"
+              className="mb-0 text-center fw-semibold d-none d-sm-block"
             >
               Not sure which one to pick?{" "}
               <a
@@ -367,6 +391,23 @@ const App = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                Get a consultation first
+              </a>
+              .
+            </p>
+
+            <p
+              style={{ marginTop: "2rem" }}
+              className="mb-0 text-center fw-semibold d-sm-none"
+            >
+              Not sure which one to pick?{" "}
+              <a
+                href="https://wa.me/6285175067273?text=Halo%2C%20saya%20mau%20konsultasi."
+                style={{ color: "#4287f5" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <br />
                 Get a consultation first
               </a>
               .
@@ -380,7 +421,7 @@ const App = () => {
         <section id="about">
           <div className="container">
             <div className="row row-cols-1 row-cols-lg-2">
-              <div className="col order-lg-1">
+              <div className="col order-lg-1 mb-5 mb-lg-0">
                 <h1 className="title mb-3">Why Choose Us</h1>
                 <p className="description mb-0">
                   Lorem Ipsum is simply dummy text of the printing and
@@ -407,7 +448,7 @@ const App = () => {
                             </svg>
                           </div>
                           <div className="ms-3">
-                            <h5 className="card-title fw-semibold">
+                            <h5 className="card-title fw-semibold mb-1">
                               Kelebihan 1
                             </h5>
                             <p className="card-text fs-6">
@@ -434,7 +475,7 @@ const App = () => {
                             </svg>
                           </div>
                           <div className="ms-3">
-                            <h5 className="card-title fw-semibold">
+                            <h5 className="card-title fw-semibold mb-1">
                               Kelebihan 2
                             </h5>
                             <p className="card-text fs-6">
@@ -461,7 +502,7 @@ const App = () => {
                             </svg>
                           </div>
                           <div className="ms-3">
-                            <h5 className="card-title fw-semibold">
+                            <h5 className="card-title fw-semibold mb-1">
                               Kelebihan 3
                             </h5>
                             <p className="card-text fs-6">
@@ -488,7 +529,7 @@ const App = () => {
                             </svg>
                           </div>
                           <div className="ms-3">
-                            <h5 className="card-title fw-semibold">
+                            <h5 className="card-title fw-semibold mb-1">
                               Kelebihan 4
                             </h5>
                             <p className="card-text fs-6">
@@ -502,7 +543,9 @@ const App = () => {
                 </div>
               </div>
               <div className="col">
-                <h1>Gambar</h1>
+                <div className="image-wrapper">
+                  <img src={People} alt="People" />
+                </div>
               </div>
             </div>
           </div>
@@ -520,6 +563,7 @@ const App = () => {
   );
 };
 
+// Package Mobile
 const PackageMobile = () => (
   <>
     <div
@@ -543,102 +587,19 @@ const PackageMobile = () => (
               />
             </div>
 
-            <div
+            <ul
               style={{ marginBottom: "2.5rem" }}
-              className="d-flex flex-column text-dark fs-6 gap-3"
+              className="custom-list text-dark fs-6"
             >
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-            </div>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+            </ul>
 
             <a
               href="#"
@@ -667,102 +628,19 @@ const PackageMobile = () => (
               />
             </div>
 
-            <div
+            <ul
               style={{ marginBottom: "2.5rem" }}
-              className="d-flex flex-column text-dark fs-6 gap-3"
+              className="custom-list text-dark fs-6"
             >
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-            </div>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+            </ul>
 
             <a
               href="#"
@@ -791,102 +669,19 @@ const PackageMobile = () => (
               />
             </div>
 
-            <div
+            <ul
               style={{ marginBottom: "2.5rem" }}
-              className="d-flex flex-column text-dark fs-6 gap-3"
+              className="custom-list text-dark fs-6"
             >
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-              <div className="d-flex align-items-center flex-nowrap gap-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="#4287f5"
-                  className="bi bi-check-circle-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
-                <span>Simple and clean design</span>
-              </div>
-            </div>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+              <li>Simple and clean design</li>
+            </ul>
 
             <a
               href="#"
@@ -901,6 +696,7 @@ const PackageMobile = () => (
   </>
 );
 
+// Package Website
 const PackageWebsite = () => (
   <>
     <h3>Website Packages</h3>
@@ -908,6 +704,7 @@ const PackageWebsite = () => (
   </>
 );
 
+// Package UI/UX Design
 const PackageUIUXDesign = () => (
   <>
     <h3>UI/UX Packages</h3>
@@ -915,6 +712,7 @@ const PackageUIUXDesign = () => (
   </>
 );
 
+// Package Video Editing
 const PackageVideoEditing = () => (
   <>
     <h3>Video Editing Packages</h3>
@@ -922,6 +720,7 @@ const PackageVideoEditing = () => (
   </>
 );
 
+// Package Graphic Design
 const PackageGraphicDesign = () => (
   <>
     <h3>Graphic Design Packages</h3>
@@ -929,6 +728,7 @@ const PackageGraphicDesign = () => (
   </>
 );
 
+// Package 2D Animation
 const Package2DAnimation = () => (
   <>
     <h3>2D Animation Packages</h3>
