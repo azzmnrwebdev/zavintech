@@ -360,7 +360,7 @@ main {
   content: "";
   position: absolute;
   background-color: #4287f5;
-  border-top-right-radius: 150px;
+  border-top-right-radius: 130px;
   box-shadow: 0 -10px 0 0 rgba(66, 135, 245, 0.5);
 }
 
@@ -398,7 +398,9 @@ main {
 }
 
 @media (min-width: 576px) {
-  /*  */
+  #about .image-wrapper::before {
+    border-top-right-radius: 150px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -501,6 +503,6 @@ main {
   }
 
   #about .image-wrapper::before {
-    border-top-right-radius: 175px;
+    border-top-right-radius: 180px;
   }
 }
