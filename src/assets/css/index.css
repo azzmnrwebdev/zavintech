@@ -360,7 +360,7 @@ main {
   content: "";
   position: absolute;
   background-color: #4287f5;
-  border-top-right-radius: 200px;
+  border-top-right-radius: 150px;
   box-shadow: 0 -10px 0 0 rgba(66, 135, 245, 0.5);
 }
 
@@ -433,6 +433,10 @@ main {
   #about .description {
     font-size: 1.125rem;
   }
+
+  #about .image-wrapper::before {
+    border-top-right-radius: 200px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -462,6 +466,10 @@ main {
     padding-left: 3rem;
     padding-right: 3rem;
   }
+
+  #about .image-wrapper::before {
+    border-top-right-radius: 150px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -490,5 +498,9 @@ main {
 
   #packages .package-content #packageMobile .card .card-price {
     font-size: 3rem;
+  }
+
+  #about .image-wrapper::before {
+    border-top-right-radius: 175px;
   }
 }
